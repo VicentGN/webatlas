@@ -1,7 +1,7 @@
 <template>
   <div class="container data">
     <!-- Flag, Title, Subdata and Map -->
-    <div class="columns">
+    <div class="columns panel">
       <!-- Flag and Title -->
       <div class="column is-8">
         <div class="columns">
@@ -52,10 +52,12 @@
         </div>
       </div>
       <!-- The Map -->
-      <div class="column is-4" />
+      <div class="column is-4">
+        <Map :coordinates="country[0].latlng" />
+      </div>
     </div>
     <!-- Another Data -->
-    <div class="columns">
+    <div class="columns panel">
       <div class="column">
         <div class="columns">
           <div class="column has-text-centered">
@@ -81,20 +83,18 @@
         </div>
       </div>
     </div>
-    <!-- Borders -->
-    <div class="columns">
-      <div class="column">
-        Hola
-      </div>
-    </div>
   </div>
 </template>
 
 <script>
+import Map from '../../components/Map'
 
 export default {
   name: 'CountriesCard',
   layout: 'MainLayout',
+  component: {
+    Map
+  },
   computed: {
     country () {
       return this.$store.state.countries.filter(country => country.alpha2Code === this.$route.params.id)
@@ -108,14 +108,6 @@ export default {
 .data {
   margin-top: 30px;
   margin-bottom: 30px;
-}
-
-#title {
-  line-height: 75px;
-}
-
-.columns {
-  border: 1px solid black;
 }
 
 .tit {

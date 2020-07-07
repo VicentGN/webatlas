@@ -29,10 +29,6 @@
         </a>
 
         <a class="navbar-item">
-          <nuxt-link to="/">Search</nuxt-link>
-        </a>
-
-        <a class="navbar-item">
           <nuxt-link to="/about">About</nuxt-link>
         </a>
       </div>

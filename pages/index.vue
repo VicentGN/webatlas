@@ -6,7 +6,7 @@
           WebAtlas
         </p>
         <p class="subtitle">
-          Information about countries at your hands
+          Information about countries at hand
         </p>
       </div>
     </div>
