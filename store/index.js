@@ -10,9 +10,6 @@ const createStore = () => {
     mutations: {
       fillWithCountries (state, payload) {
         state.countries = payload
-      },
-      filterCountries (state, payload) {
-        state.countries = state.countries.filter(country => country.name === payload)
       }
     },
     actions: {
@@ -25,6 +22,12 @@ const createStore = () => {
           .catch()
       }
     }
+    /* getters: {
+      getCountriesByName: state => (name) => {
+        return state.countries.filter(country => country.name === name)
+      }
+    } */
+
   })
 }
 

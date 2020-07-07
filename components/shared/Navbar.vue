@@ -29,7 +29,7 @@
         </a>
 
         <a class="navbar-item">
-          <nuxt-link to="/search">Search</nuxt-link>
+          <nuxt-link to="/">Search</nuxt-link>
         </a>
 
         <a class="navbar-item">

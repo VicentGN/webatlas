@@ -73,6 +73,11 @@ export default {
           customProperties: false
         }
       }
+    },
+    extend (config, { isClient }) {
+      if (isClient) {
+        config.devtool = 'source-map'
+      }
     }
   }
 }

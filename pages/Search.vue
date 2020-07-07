@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import CountriesCard from '../components/CountriesCard'
 
 export default {
@@ -24,13 +25,13 @@ export default {
     CountriesCard
   },
   computed: {
-    countries () {
-      return this.$store.state.countries
-    }
+    ...mapGetters({
+      countries: 'getCountriesByName'
+    })
   },
   methods: {
     searchCountry (country) {
-      this.$store.commit('filterCountries', country)
+      this.$store.getters.getCountriesByName(country)
     }
   }
 }
