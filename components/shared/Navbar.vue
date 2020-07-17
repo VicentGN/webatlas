@@ -1,17 +1,14 @@
 <template>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item">
-          <nuxt-link to="/">Home</nuxt-link>
-        </a>
-
-        <a class="navbar-item">
-          <nuxt-link to="/about">About</nuxt-link>
-        </a>
-      </div>
+  <div class="container">
+    <div class="columns has-text-centered navbar">
+      <nuxt-link to="/" class="column is-2 is-offset-4 link">
+        <p>Home</p>
+      </nuxt-link>
+      <nuxt-link to="/about" class="column is-2 link">
+        <p>About</p>
+      </nuxt-link>
     </div>
-  </nav>
+  </div>
 </template>
 
 <script>
@@ -20,4 +17,16 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+
+  .link{
+    font-size: 25px;
+    margin: 10px 0px;
+    color: black;
+  }
+
+  .link:hover{
+    color: red;
+  }
+
+</style>

@@ -13,7 +13,7 @@
               </div>
               <!-- The Title -->
               <div id="title" class="column is-10 title is-1">
-                {{ country[0].altSpellings[1] }}
+                {{ country[0].altSpellings[1] || country[0].name }}
               </div>
             </div>
           </div>
@@ -25,27 +25,27 @@
               <div class="column has-text-centered">
                 <span class="tit">Capital</span>
                 <br>
-                <span class="val">{{ country[0].capital }}</span>
+                <span class="val">{{ country[0].capital || 'noData' }}</span>
               </div>
               <div class="column has-text-centered">
                 <span class="tit">Population</span>
                 <br>
-                <span class="val">{{ country[0].population }}</span>
+                <span class="val">{{ country[0].population || 'noData' }}</span>
               </div>
               <div class="column has-text-centered">
                 <span class="tit">Area (Sq/Km)</span>
                 <br>
-                <span class="val">{{ country[0].area }}</span>
+                <span class="val">{{ country[0].area || 'noData' }}</span>
               </div>
               <div class="column has-text-centered">
                 <span class="tit">Region</span>
                 <br>
-                <span class="val">{{ country[0].region }}</span>
+                <span class="val">{{ country[0].region || 'noData' }}</span>
               </div>
               <div class="column has-text-centered">
                 <span class="tit">Language</span>
                 <br>
-                <span class="val">{{ country[0].languages[0].name }}</span>
+                <span class="val">{{ country[0].languages[0].name || 'noData' }}</span>
               </div>
             </div>
           </div>
@@ -63,22 +63,22 @@
           <div class="column has-text-centered">
             <span class="tit">Calling Code</span>
             <br>
-            <span class="val">{{ country[0].callingCodes[0] }}</span>
+            <span class="val">{{ country[0].callingCodes[0] || 'noData' }}</span>
           </div>
           <div class="column has-text-centered">
             <span class="tit">Demonym</span>
             <br>
-            <span class="val">{{ country[0].demonym }}</span>
+            <span class="val">{{ country[0].demonym || 'noData' }}</span>
           </div>
           <div class="column has-text-centered">
             <span class="tit">Currency</span>
             <br>
-            <span class="val">{{ country[0].currencies[0].symbol }}</span>
+            <span class="val">{{ country[0].currencies[0].symbol || 'noData' }}</span>
           </div>
           <div class="column has-text-centered">
             <span class="tit">Native Name</span>
             <br>
-            <span class="val">{{ country[0].nativeName }}</span>
+            <span class="val">{{ country[0].nativeName || 'noData' }}</span>
           </div>
         </div>
       </div>

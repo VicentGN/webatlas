@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="columns">
-      <div id="display" class="column">
+      <div id="display" class="column has-text-centered">
         <CountriesCard v-for="country in countries" :key="country.id" :country="country" />
       </div>
     </div>

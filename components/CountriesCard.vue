@@ -42,7 +42,7 @@ export default {
 
 .card {
     width: 300px;
-    margin: 30px;
+    margin: 15px;
 
 }
 
