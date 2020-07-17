@@ -53,7 +53,7 @@
       </div>
       <!-- The Map -->
       <div class="column is-4">
-        <Map :coordinates="country[0].latlng" />
+        <Map :country="country[0]" />
       </div>
     </div>
     <!-- Another Data -->

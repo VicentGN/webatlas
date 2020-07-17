@@ -1,29 +1,40 @@
 <template>
-  <l-map>
+  <l-map
+    :zoom="zoom"
+    :center="center"
+  >
     <l-tile-layer :url="url" />
+    <l-marker :lat-lng="center" @click="showMessage" />
   </l-map>
 </template>
 
 <script>
-import { LMap, LTileLayer } from 'vue2-leaflet'
+import { LMap, LTileLayer, LMarker } from 'vue2-leaflet'
 
 export default {
   name: 'Map',
   components: {
     LMap,
-    LTileLayer
+    LTileLayer,
+    LMarker
   },
   props: {
     // eslint-disable-next-line vue/require-default-prop
-    coordinates: Object
+    country: Object
   },
   data () {
     return {
       url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-      zoom: 4,
-      center: [this.coordinates[0], this.coordinates[1]]
+      zoom: 2,
+      center: [this.country.latlng[0], this.country.latlng[1]]
+    }
+  },
+  methods: {
+    showMessage (event) {
+      event.target.bindPopup(`I'm a country of ${this.country.region}`)
     }
   }
+
 }
 </script>
 
